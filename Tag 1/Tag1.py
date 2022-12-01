@@ -10,6 +10,8 @@ for i in inp:
         most.append(add)
         add = 0
 
+print(most)
+
 last = []
 
 for i in range(3):
