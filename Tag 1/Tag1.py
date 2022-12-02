@@ -1,21 +1,20 @@
 inp = open("input.txt").read().split("\n")
 
-most = []
-add = 0
+def solve():
+    most = []
+    last = []
+    add = 0
+    for i in inp:
+        if i != '':
+            add += int(i)
+        else:
+            most.append(add)
+            add = 0
+    for i in range(3):
+        last.append(max(most))
+        most.remove(max(most))
 
-for i in inp:
-    if i != '':
-        add += int(i)
-    else:
-        most.append(add)
-        add = 0
+    return str(max(most)), str(sum(last))
 
-print(most)
 
-last = []
-
-for i in range(3):
-    last.append(max(most))
-    most.remove(max(most))
-
-print(sum(last))
+print(" ".join(solve()))
