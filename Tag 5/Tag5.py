@@ -1,6 +1,6 @@
 import string
 
-inp = open("input.txt").read().split("\n")
+inp = open("message.txt").read().split("\n")
 
 container = []
 anweisung = []
